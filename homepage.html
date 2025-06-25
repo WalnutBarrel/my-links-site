@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Home</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .book-details {
+            display: none;
+            margin-top: 1rem;
+            background-color: #f9f9f9;
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        .book-details img {
+            width: 100px;
+            float: right;
+            margin-left: 1rem;
+        }
+    </style>
+    <script>
+        function showDetails(categoryId) {
+            document.querySelectorAll('.book-details').forEach(div => div.style.display = 'none');
+            document.getElementById(categoryId).style.display = 'block';
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to the Online Library</h1>
+        <nav>
+            <a href="#">Books</a>
+            <a href="#">My Account</a>
+            <a href="index.html">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <p>Explore thousands of e-books and resources here.</p>
+        </section>
+
+        <section class="features">
+            <h2>Popular Categories</h2>
+            <ul>
+                <li><a href="#" onclick="showDetails('fiction')">Fiction</a></li>
+                <li><a href="#" onclick="showDetails('science')">Science</a></li>
+                <li><a href="#" onclick="showDetails('history')">History</a></li>
+                <li><a href="#" onclick="showDetails('technology')">Technology</a></li>
+            </ul>
+        </section>
+
+        <section id="fiction" class="book-details">
+            <h3>Fiction - Book Example</h3>
+            <img src="https://www.lexiconin.com/wp-content/uploads/2022/05/F95F79F9-73FC-4B8F-A73B-196E4454C6F2-1024x576.jpg"
+                alt="The Silent Patient">
+            <p><strong>Title:</strong> The Silent Patient</p>
+            <p><strong>Author:</strong> Alex Michaelides</p>
+            <p><strong>Pages:</strong> 336</p>
+            <p><strong>Price:</strong> ₹399</p>
+        </section>
+
+        <section id="science" class="book-details">
+            <h3>Science - Book Example</h3>
+            <img src="https://upload.wikimedia.org/wikipedia/en/a/a3/BriefHistoryTime.jpg"
+                alt="A Brief History of Time">
+            <p><strong>Title:</strong> A Brief History of Time</p>
+            <p><strong>Author:</strong> Stephen Hawking</p>
+            <p><strong>Pages:</strong> 212</p>
+            <p><strong>Price:</strong> ₹499</p>
+        </section>
+
+        <section id="history" class="book-details">
+            <h3>History - Book Example</h3>
+            <img src="https://cdn.penguin.co.in/wp-content/uploads/2023/06/9780099590088-2.jpg" alt="Sapiens">
+            <p><strong>Title:</strong> Sapiens: A Brief History of Humankind</p>
+            <p><strong>Author:</strong> Yuval Noah Harari</p>
+            <p><strong>Pages:</strong> 498</p>
+            <p><strong>Price:</strong> ₹599</p>
+        </section>
+
+        <section id="technology" class="book-details">
+            <h3>Technology - Book Example</h3>
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgGQfUFQmFwuW_l3bAmI4SXn944HZvFACHQqScAd87ryzhC_nrNvGVZs6Q0XFnWK0u6_FRBFaIOMJwMS_7oqhJAAa4kyO-UFy_NwjPjcgJGAd9ko4Hyli_2cB6gGNlros9H2xongjyAbuRv/s320/Clean+Code.jpg"
+                alt="Clean Code">
+            <p><strong>Title:</strong> Clean Code</p>
+            <p><strong>Author:</strong> Robert C. Martin</p>
+            <p><strong>Pages:</strong> 464</p>
+            <p><strong>Price:</strong> ₹649</p>
+        </section>
+
+        <section class="actions">
+            <h2>Quick Actions</h2>
+            <button onclick="alert('Redirecting to borrow a book...')">Borrow a Book</button>
+            <button onclick="alert('Redirecting to return section...')">Return a Book</button>
+            <button onclick="alert('Redirecting to search catalog...')">Search Catalog</button>
+        </section>
+    </main>
+</body>
+
+</html>
